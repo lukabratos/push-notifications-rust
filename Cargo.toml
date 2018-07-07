@@ -1,0 +1,17 @@
+[package]
+name = "beams"
+version = "0.1.0"
+authors = ["Luka Bratos <luka.bratos@gmail.com>"]
+
+[lib]
+name = "beams"
+path = "src/lib.rs"
+
+[[bin]]
+name = "beams"
+path = "src/bin.rs"
+
+[dependencies]
+hyper = "0.11"
+tokio-core = "0.1"
+futures = "0.1"
