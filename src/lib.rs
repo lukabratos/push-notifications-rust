@@ -34,4 +34,7 @@ pub fn publish(instance_id: String, secret_key: String, interests: Vec<String>, 
     if resp.ok() {
         println!("{:?}", resp);
     }
+     else {
+        println!("{:?}", resp.status());
+     }
 }
