@@ -8,12 +8,13 @@ pub fn publish(interests: Vec<String>, publish_request: HashMap<String, HashMap<
     println!("{:?}", interests);
     println!("{:?}", publish_request);
 
-    let resp = ureq::post("http://httpbin.org/post")
-    .set("X-Luka-Header", "Test")
-    .send_json(json!({
-        "a": "aaaa",
-        "b": "bbbb"
-    }));
+    // Merge `interests` into the `publish_request`.
+
+    let resp = ureq::post("https://1234.pushnotifications.pusher.com/publish_api/v1")
+    .set("Accept", "application/json")
+    .set("Content-Type", "application/json")
+    .set("Authorization", "test-token")
+    .send_json(json!(publish_request));
 
     if resp.ok() {
         println!("{:?}", resp);
