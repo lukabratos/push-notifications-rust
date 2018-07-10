@@ -16,5 +16,5 @@ pub fn main() {
     let mut publish_request = HashMap::new();
     publish_request.insert(String::from("apns"), aps);
 
-    publish(interests, publish_request);
+    publish(String::from("id"), String::from("key"), interests, publish_request);
 }
