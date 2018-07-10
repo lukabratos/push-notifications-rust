@@ -25,7 +25,7 @@ pub fn publish(instance_id: String, secret_key: String, interests: Vec<String>, 
 
     println!("{:?}", json!(payload));
 
-    let resp = ureq::post(format!("https://{}.pushnotifications.pusher.com/publish_api/v1", instance_id))
+    let resp = ureq::post(format!("https://{}.pushnotifications.pusher.com/publish_api/v1/instances/{}/publishes", instance_id, instance_id))
     .set("Accept", "application/json")
     .set("Content-Type", "application/json")
     .set("Authorization", format!("Bearer {}", secret_key))
