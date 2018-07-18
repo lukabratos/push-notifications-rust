@@ -1,7 +1,9 @@
 [package]
 name = "beams"
+description = "Pusher Beams Rust Server SDK"
 version = "0.1.0"
 authors = ["Luka Bratos <luka.bratos@gmail.com>"]
+license = "MIT"
 
 [lib]
 name = "beams"
